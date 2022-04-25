@@ -1,0 +1,53 @@
+.awesome{
+    margin: 100px 0;
+    background-image: url(../../img/8.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    .awesome__content{
+        text-align: center;
+        padding: 150px 0;
+        .awesome__top{
+            color: $color-white-0;
+            p{
+                letter-spacing: 3px;
+                font-size: $fs-0 + 1;
+                color: $color-yellow-1;
+                margin-bottom:  0;
+            }
+            h1{
+                letter-spacing: 2px;
+                margin-bottom: 0;
+                font-size: $fs-4;
+                line-height: 1.5;
+            }
+        }
+        .awesome__button{
+            button{
+                margin-top: 55px;
+                transition: all .3s;
+                &:hover{
+                    background-color: $color-white-0;
+                    color: $colo-black-2;
+                }
+                @include styleButton(unset, 1px, $fs-1 + 1, $pd-1, $pd-4 - 2, $color-yellow-1, $color-white-0 );
+            }
+        }
+    }
+}
+
+@include responsive("medium"){
+    .awesome{
+        .awesome__top{
+            h1{
+                font-size: $fs-5 + 2!important;
+            }
+        }
+        .awesome__button{
+            button{
+                font-size: $fs-1 - 1!important;
+            }
+        }
+    }
+}

@@ -1,0 +1,131 @@
+.creative {
+    .welove__content {
+        .top {
+            p {
+                width: 52%;
+                margin: 0 auto;
+                font-size: 15px;
+            }
+        }
+        .bottom {
+            width: 100%;
+            .mynav {
+                justify-content: center;
+                .nav-item {
+                    &:hover {
+                        .nav-link {
+                            color: black;
+                        }
+                    }
+                    .nav-link {
+                        &.active {
+                            color: $color-black-0;
+                        }
+                        border: unset;
+                        margin-bottom: 0;
+                        color: $color-gray-12;
+                    }
+                }
+            }
+            .tab-content {
+                .col-3-cus {
+                    padding: 0;
+                    .cr-item {
+                        &:hover {
+                            .creative__hover {
+                                opacity: 1;
+                                .creative__content {
+                                    .search {
+                                        top: 20%;
+                                        left: 0;
+                                        right: 0;
+                                        opacity: 1;
+                                    }
+                                    .cr-hover {
+                                        bottom: 0;
+                                        left: 0;
+                                        right: 0;
+                                        top: 55%;
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+                        }
+                        position: relative;
+                        .cr-img {
+                            display: block;
+                            width: 100%;
+                            height: auto;
+                        }
+                        .creative__hover {
+                            opacity: 0;
+                            transition: all 0.3s;
+                            position: absolute;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            background-color: rgba(255, 255, 255, 0.9);
+                            border: 20px solid rgba(0, 0, 0, 0.1);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            .creative__content {
+                                .search {
+                                    transition: all 0.3s;
+                                    position: absolute;
+                                    top: 0;
+                                    opacity: 0;
+                                    left: 46%;
+                                    font-size: $fs-4 - 3;
+                                }
+                                .cr-hover {
+                                    transition: all 0.3s;
+                                    position: absolute;
+                                    bottom: -15px;
+                                    left: 28%;
+                                    opacity: 0;
+                                    p {
+                                        cursor: pointer;
+                                        transition: all 0.3s;
+                                        &:hover {
+                                            color: $color-yellow-1;
+                                        }
+                                        font-size: $fs-1 - 1;
+                                        letter-spacing: 3px;
+                                    }
+                                    h4 {
+                                        margin-bottom: $mg-0 + 5;
+                                        margin-top: $mg-2;
+                                        font-size: $fs-1 + 1;
+                                        letter-spacing: 4px;
+                                    }
+                                    .lightbox__link {
+                                        transition: all 0.3s;
+                                        &:hover {
+                                            color: $color-yellow-1;
+                                        }
+                                        color: $colo-black-2;
+                                        text-decoration: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive("medium"){
+    .creative{
+        .welove__content{
+            .top{
+                p{
+                    width: 80%;
+                }
+            }
+        }
+    }
+}

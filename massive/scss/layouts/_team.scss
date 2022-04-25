@@ -1,0 +1,148 @@
+.team {
+    .welove__content {
+        padding-top: 0;
+        .top {
+            .team-p {
+                width: 81%;
+                margin: 0 auto;
+                p {
+                    font-size: $fs-1 + 1;
+                }
+            }
+        }
+        .bottom {
+            .bottom-content {
+                &:hover {
+                    .bottom__hover {
+                        opacity: 1;
+                        .hover__top {
+                            top: 15%;
+                            opacity: 1;
+                        }
+                        .hover__bottom {
+                            bottom: 10%;
+                            opacity: 1;
+                        }
+                    }
+                }
+                position: relative;
+                padding: 0 20px;
+                .img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                }
+                .caption-content {
+                    text-align: right;
+                    color: $color-white-0;
+                    width: 62%;
+                    right: 20px;
+                    bottom: 30px;
+                    position: absolute;
+                    display: inline-block;
+                    background-color: rgba(0, 0, 0, 0.7);
+                    h5 {
+                        padding-right: $pd-3 + 5;
+                        margin-top: 1rem;
+                        margin-bottom: $mg-0;
+                        letter-spacing: 2px;
+                        font-size: $fs-1 + 1;
+                    }
+                    p {
+                        padding-right: $pd-3 + 5;
+                        color: rgba(255, 255, 255, 0.5);
+                        font-size: $fs-1 - 1;
+                        letter-spacing: 2px;
+                    }
+                }
+                .bottom__hover {
+                    margin-left: $mg-2;
+                    margin-right: $mg-2;
+                    transition: all 0.3s;
+                    opacity: 0;
+                    background-color: rgba(255, 255, 255, 0.9);
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    border: 20px solid rgba(0, 0, 0, 0.1);
+                    .hover__top {
+                        padding: 0 $pd-3;
+                        transition: all 0.3s;
+                        position: absolute;
+                        top: 0;
+                        opacity: 0;
+                        // transform: translateY(-55%);
+
+                        h4 {
+                            margin-bottom: $mg-1;
+                            letter-spacing: 4px;
+                            font-size: $fs-1 + 1;
+                        }
+                        p {
+                            color: $color-gray-8;
+                            font-size: $fs-1 + 1;
+                            font-weight: $fw-0;
+                            line-height: 30px;
+                        }
+                    }
+                    .hover__bottom {
+                        transition: all 0.3s;
+                        opacity: 0;
+                        width: 100%;
+                        position: absolute;
+                        bottom: 0;
+
+                        i {
+                            margin: 0 $mg-0 + 5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:992.5px) and (max-width:1200px){
+    .team{
+        .welove__content{
+            .bottom{
+                width: 92%;
+                .col4-cus{
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}
+
+// @include responsive("extra-large"){
+//     .team{
+//         .welove__content{
+//             .bottom{
+//                 width: 92%;
+//                 .col4-cus{
+//                     padding-left: 0;
+//                     padding-right: 0;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+@include responsive("medium") {
+    .team {
+        .welove__content {
+            .top {
+                .team-p {
+                    width: 80%;
+                    p {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

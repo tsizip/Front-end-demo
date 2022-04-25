@@ -1,0 +1,43 @@
+.hiring {
+    width: 82%;
+    margin: 0 auto;
+    background-color: $color-gray-13;
+    padding: 40px;
+    .hiring__top {
+        h4 {
+            margin-bottom: 0;
+            letter-spacing: 1px;
+            font-size: $fs-3;
+            span {
+                color: $color-yellow-1;
+            }
+        }
+        p {
+            margin-top: $mg-0 + 5;
+            margin-bottom: 0;
+            color: $color-gray-8;
+            font-size: $fs-0;
+        }
+    }
+    .hiring__bottom {
+        text-align: right;
+        button {
+            white-space: nowrap;
+            transition: all 0.3s;
+            &:hover {
+                background-color: $color-yellow-1;
+            }
+            @include styleButton(unset, 1px, $fs-1 + 1, $pd-1, $pd-4 - 2, $colo-black-2, $color-white-0);
+        }
+    }
+}
+
+@include responsive("medium"){
+    .hiring{
+        width: 92%;
+        .hiring__bottom{
+            margin-top: $mg-0 + 5;
+            text-align: left;
+        }
+    }
+}

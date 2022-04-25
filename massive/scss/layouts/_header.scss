@@ -1,0 +1,102 @@
+header {
+    transition: all .5s;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 300000;
+    width: 100%;
+    nav {
+        z-index: 300000;
+        padding-top: 0;
+        padding-bottom: 0;
+        width: 96%;
+        margin: 0 auto;
+        .navbar-brand{
+            img{
+                transition: all .5s;
+            }
+        }
+        .h-coll {
+            justify-content: end;
+            .navbar-nav {
+                .nav-item {
+                    &.active {
+                        .nav-link {
+                            @include styleText($color-yellow-1, $fs-1, $fw-0);
+                        }
+                    }
+                    .nav-link {
+                        @include styleText($color-white-0, $fs-1, $fw-0);
+                        padding: 0 $pd-0 + 2;
+                    }
+                }
+            }
+        }
+    }
+
+    @include responsive ("medium"){
+        nav {
+            .navbar-brand{
+                img{
+                    width: 61px;
+                }
+            }
+        }
+    }
+    
+    @include responsive("large"){
+       
+        .navbar-nav{
+            background-color: $color-white-0;
+            .nav-item {
+                position: relative;
+                &::after{
+                    position: absolute;
+                    right: 9%;
+                    top: 0;
+                    content: "";
+                    display: inline-block;
+                    height: 100%;
+                    width: 1px;
+                    background-color: black;
+                }
+                border-bottom: 1px solid $color-gray-16;
+                padding: 15px 0;
+                &.active {
+                    .nav-link {
+                        @include styleText($color-yellow-1!important, $fs-1, $fw-0);
+                    }
+                }
+                .nav-link {
+                    @include styleText($colo-black-2!important, $fs-1, $fw-0);
+                    padding: 0 $pd-0 + 2;
+                    span{
+                        position: absolute;
+                        right: 4%;
+                        top: 27%;
+                    }
+                }
+            }
+            .item1{
+                display: none;
+            }
+        }
+    }
+    
+}
+// #headerFixed {
+//     transition: all .5s;
+//     background-color: black;
+//     position: fixed;
+//     top: 0;
+//     width: 100%;
+    
+//     transition: transform 0.5s;
+//     nav{
+//         padding-top: 0;
+//         padding-bottom: 0;
+        
+//     }
+// }

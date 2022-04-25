@@ -1,0 +1,111 @@
+
+    .welove__content{
+        padding: 100px 0;
+        text-align: center;
+        .top{
+            margin-bottom: $mg-3 + 40;
+            h3{
+                font-size: 24px;
+                letter-spacing: 2px;
+                padding-bottom: $pd-0;
+                margin-bottom: $mg-2;
+                position: relative;
+                &::after{
+                    position: absolute;
+                    bottom: -2px;
+                    left: 50%;
+                    margin-left: -31px;
+                    content: "";
+                    width: 60px;
+                    height: 2px;
+                    display: inline-block;
+                    background-color: $color-black-0;
+                }
+            }
+            p{
+                width: 60%;
+                margin: 0 auto;
+                color: $color-gray-8;
+                line-height: 25px;
+            }
+        }
+        .bottom{
+            width: 85%;
+            margin: 0 auto;
+            .col-4-cus{
+                padding-left: $pd-4 - 2;padding-right: $pd-4 - 2;
+                .content{
+                    
+                    &:hover{
+                        .icon{
+                            
+                            .ruler{
+                                transition: .5s;
+                                background-color: $color-yellow-1;
+                            }
+                        }
+                    }
+                    position: relative;
+                    text-align: left;
+                    border: 1px solid $color-gray-9;
+                    padding: $pd-4 - 2;
+                    h4{
+                        &::before{
+                            position: absolute;
+                            top: -9px;
+                            left: 20px;
+                            content: "";
+                            width: 80px;
+                            height: 17px;
+                            background-color: $color-white-0;
+                            display: inline-block;
+                        }
+                        padding-top: $pd-4;
+                        @include styleH4($mg-2, 1px, $fw-0, $fs-0 + 3);
+                        
+                    }
+                    p{
+                        color: $color-gray-8;
+                    }
+                    .icon{
+                        z-index: 10;
+                        position: absolute;
+                        top: -31px;
+                        .ruler{
+                            
+                            font-size: $fs-4 - 6;
+                            padding: $pd-1;
+                            background-color: $colo-black-2;
+                            color: $color-white-0;
+                            border-radius: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+@include responsive("medium"){
+    .welove__content{
+        .top{
+            h3{
+                font-size: $fs-3;
+            }
+            p{
+                width: 80%;
+            }
+        }
+        .bottom{
+            .col-4-cus{
+                padding-left: 0;
+                padding-right: 0;
+                .content{
+                    margin-bottom: 50px;
+                    p{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

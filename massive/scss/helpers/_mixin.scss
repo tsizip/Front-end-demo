@@ -1,0 +1,32 @@
+@mixin styleText($color, $fs, $fw) {
+    color: $color;
+    font-size: $fs;
+    font-weight: $fw;
+}
+
+@mixin styleH4($mb, $lp, $fw, $fs) {
+    margin-bottom: $mb;
+    letter-spacing: $lp;
+    font-weight: $fw;
+    font-size: $fs;
+}
+
+@mixin styleButton($boder, $lspc, $fs, $pdy, $pdx, $bgcolor, $color) {
+    border: $boder;
+    letter-spacing: $lspc;
+    font-size: $fs;
+    padding: $pdy $pdx ;
+    background-color: $bgcolor;
+    color: $color;
+}
+@mixin responsive($screen) {
+    @if map-has-key($map: $breakpoints, $key: $screen){
+      $value: map-get($map: $breakpoints, $key: $screen);
+      @media screen and (max-width: $value){
+        @content;
+      }
+    }
+    @else{
+      @warn "`{$screen}` isn't exist in breakpoints";
+    }
+  }

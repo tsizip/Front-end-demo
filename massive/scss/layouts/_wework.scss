@@ -1,0 +1,146 @@
+.wework{
+    background-image: url(../img/pattern-2.png);
+    background-repeat: repeat;
+
+    .wework__content{
+        padding: 100px;
+        .nav{
+            margin-bottom: $mg-3;
+            .nav-item{
+                // &::after{
+                //     width: 50px;
+                //     height: 30px;
+                //     content: "";
+                //     display: block;
+                //     background-color: $color-white-0;
+                //     position: absolute;
+                //     bottom: -1px;
+                //     left: 35%;
+                    
+                // }
+                transition: all .3s;
+                position: relative;
+                &:hover{
+                    .nav-link{
+                        
+                        &::after{
+                            // transition: all .5s;
+                            opacity: 1;
+                            content: "";
+                            width: 30px;
+                            height: 30px;
+                            display: inline-block;
+                            background-color: $color-white-0;
+                            position: absolute;
+                            bottom: -7%;
+                            left:42%;
+                            transform: rotate(45deg);
+                        }
+                        background-color: $color-white-0;
+                    }
+                }
+                margin-right: $mg-2;
+                .nav-link{
+                    &::after{
+                        // transition: all .5s;
+                        opacity: 0;
+                        content: "";
+                        width: 30px;
+                        height: 30px;
+                        display: inline-block;
+                        background-color: $color-white-0;
+                        position: absolute;
+                        bottom: -7%;
+                        left:42%;
+                        transform: rotate(45deg);
+                    }
+                    &.active{
+                        
+                        &::after{
+                            transition: all .5s;
+                            opacity: 1;
+                            content: "";
+                            width: 30px;
+                            height: 30px;
+                            display: inline-block;
+                            background-color: $color-white-0;
+                            position: absolute;
+                            bottom: -7%;
+                            left:42%;
+                            transform: rotate(45deg);
+                        }
+                        background-color: $color-white-0;
+                    }
+                    color: $colo-black-2;
+                    background-color: rgba(34,34,34,0.05);
+                    border-radius: 0;
+                    border-color: transparent;
+                    padding: $pd-3 + 5 70px;
+                    font-size: $fs-2 + 7;
+                }
+            }
+        }
+        .wework__cus{
+            .tab-pane{
+                line-height: 30px;
+                p{
+                    &:first-child{
+                        letter-spacing: 2px;
+                    color: $color-gray-8;
+                    font-size: $fs-1 + 1;
+                    margin-bottom: 0;
+                    }
+                    
+                }
+                h2{
+                    font-size: $fs-5 + 6;
+                    margin-bottom: $mg-3 + 10;
+                    letter-spacing: 2px;
+                    font-weight: $fw-0;
+                    color: $colo-black-2;
+                    line-height: 1.5;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px){
+    .wework{
+        .wework__content{
+            .nav{
+                .nav-item{
+                    .nav-link{
+                        padding: $pd-3 + 5 200px!important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include responsive("medium"){
+    .wework{
+        .wework__content{
+            padding: 100px 30px;
+            .nav{
+                justify-content: center;
+                .nav-item{
+                    margin-right: 0;
+                    margin-bottom: $mg-2 - 5;
+                    .nav-link{
+                        padding: $pd-3 + 5 235px;
+                        &.active::after{
+                            left: 47%;
+                        }
+                        &:hover{
+                            &::after{
+                                left: 47%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

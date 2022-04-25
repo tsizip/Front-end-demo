@@ -1,0 +1,51 @@
+.comment {
+    hr {
+        width: 100%;
+    }
+    padding-right: 0;
+    padding-left: 0;
+    .comment__content {
+        padding: 100px 0;
+        width: 60%;
+        margin: 0 auto;
+        .my-carousel1 {
+            .item {
+                .item__content {
+                    text-align: center;
+                    .item__img {
+                        margin-bottom: $mg-2;
+                        width: 100px;
+                        display: inline-block;
+                        img {
+                            border-radius: 50%;
+                            width: 100%;
+                            display: block;
+                            height: auto;
+                        }
+                    }
+                    .item__content1 {
+                        .content__top {
+                            p {
+                                font-size: $fs-0 + 1;
+                                font-style: italic;
+                                line-height: 30px;
+                                color: $color-gray-8;
+                            }
+                        }
+                        .content__bottom {
+                            margin-top: $mg-0 + 5;
+                            letter-spacing: 2px;
+                            text-transform: uppercase;
+                            color: #222;
+                            font-size: $fs-1 + 1;
+                            p{
+                                font-size: $fs-1 - 1;
+                                color: #7f7f7f;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

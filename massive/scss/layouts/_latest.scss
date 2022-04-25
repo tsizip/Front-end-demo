@@ -1,0 +1,112 @@
+.latest{
+    .latest__content{
+        .welove__content {
+            padding-top: 0;
+            .top {
+                .team-p {
+                    
+                    margin: 0 auto;
+                    p {
+                        font-size: $fs-1 + 1;
+                    }
+                }
+            }
+            .bottom{
+                .cus{
+                    align-items: center;
+                }
+                text-align: left;
+                color: $color-gray-14;
+                font-size: $fs-0;
+                .latest__left{
+                    img{
+                        width: 100%;
+                    }
+                }
+                .latest__right{
+                    h4{
+                        cursor: pointer;
+                            transition: all .3s;
+                            &:hover{
+                                color: $color-yellow-1;
+                            }
+                        color: $colo-black-2;
+                        font-size: $fs-3;
+                        letter-spacing: 1px;
+                        margin-bottom: $mg-0 + 5;
+                        line-height: 1.5;
+                    }
+                    .i-s{
+                        margin-bottom: $mg-0 + 5;
+                        font-size: $fs-1 - 1;
+                        letter-spacing: 1px;
+                        .span1{
+                            cursor: pointer;
+                            transition: all .3s;
+                            &:hover{
+                                color: $color-yellow-1;
+                            }
+                            margin-right: $mg-0 + 5;
+                        }
+                        .span2{
+                            cursor: pointer;
+                            transition: all .3s;
+                            &:hover{
+                                color: $color-yellow-1;
+                            }
+                        }
+                    }
+                    .m-s{
+                        font-size: $fs-1 - 1;
+                        letter-spacing: 2px;
+                        margin-bottom: $mg-1;
+                        span{
+                            cursor: pointer;
+                            transition: all .3s;
+                            &:hover{
+                                color: $color-yellow-1;
+                            }
+                        }
+                    }
+                    .content{
+                        color: $color-gray-8;
+                        line-height: 30px;
+                        font-size: $fs-0;
+                    }
+                    a{
+                        transition: all .3s;
+                        &:hover{
+                            color: $colo-black-2;
+                        }
+                        text-decoration: none;
+                        color: $color-gray-15;
+                        letter-spacing: 1px;
+                        i{
+                            margin-left: $mg-0 + 5;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(min-width: 768px) and (max-width: 992px){
+    .latest{
+        .welove__content{
+            .bottom{
+                width: 75%;
+            }
+        }
+    }
+}
+
+// @include responsive("large"){
+//     .latest{
+//         .welove__content{
+//             .bottom{
+//                 width: 75%;
+//             }
+//         }
+//     }
+// }
